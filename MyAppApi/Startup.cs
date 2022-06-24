@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using MyAppApi.Data;
 using MyAppApi.Sevices;
+using MyAppApi.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +33,9 @@ namespace MyAppApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
             services.AddAuthorization();
+
+            //services.AddAuthorization();
 
             services.AddDbContext<MyDbContext>(option => {
                 option.UseSqlServer(Configuration.GetConnectionString("MyDB"));
@@ -59,7 +61,7 @@ namespace MyAppApi
                     ClockSkew = TimeSpan.Zero
                 };
             });
-           
+
             services.AddSwaggerGen(c =>
            {
                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Swagger MyAppApi", Version = "v1" });
