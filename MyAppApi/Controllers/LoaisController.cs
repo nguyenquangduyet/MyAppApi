@@ -9,8 +9,8 @@ namespace MyAppApi.Controllers
     [ApiController]
     public class LoaisController : ControllerBase
     {
-        public readonly ILoaiReposotory _loaiReposotory;
-        public LoaisController(ILoaiReposotory loaiReposotory)
+        public readonly ILoaiRepository _loaiReposotory;
+        public LoaisController(ILoaiRepository loaiReposotory)
         {
             _loaiReposotory = loaiReposotory;
         }

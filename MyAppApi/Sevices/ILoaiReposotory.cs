@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MyAppApi.Sevices
 {
-    public interface ILoaiReposotory 
+    public interface ILoaiRepository 
     {
         List<LoaiVN> GetAll();
         LoaiVN GetById(int id);

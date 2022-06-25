@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace MyAppApi.Sevices
 {
-    public class LoaiRepository : ILoaiReposotory
+    public class LoaiRepository : ILoaiRepository
     {
         private readonly MyDbContext _context;
 

@@ -23,7 +23,6 @@
   
   <ItemGroup>
     <Folder Include="Helps\" />
-    <Folder Include="Sevices\" />
 
   </ItemGroup>
 

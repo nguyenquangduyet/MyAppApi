@@ -11,7 +11,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using MyAppApi.Data;
 using MyAppApi.Sevices;
-using MyAppApi.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +40,7 @@ namespace MyAppApi
                 option.UseSqlServer(Configuration.GetConnectionString("MyDB"));
             });
 
-            services.AddScoped<ILoaiRepository, LoaiRepository>();
+            services.AddScoped<ILoaiRepository, LoaiRepositoryInMemory>();
 
             var secretKey = Configuration["AppSettings:SecretKey"];
             var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
